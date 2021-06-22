@@ -1,0 +1,2036 @@
+
+/* 599px以下 */
+@media only screen and (max-width: 599px) {
+        body {
+            color: #111111;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.4rem;
+        }
+
+        #contents-wrap {
+            opacity: 0;
+            transition: all 1.4s;
+        }
+
+        #contents-wrap.fade-in {
+            opacity: 1;
+        }
+
+        .loading-img {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 70px;
+            height: 70px;
+        }
+
+        .loading-img img {
+            width: 100%;
+            height: auto;
+        }
+        /* --------------------header開始-------------------------- */
+
+        header {
+            width: 100%;
+            position: relative;
+        }
+
+        /* MENU按鈕 */
+        .slide-nav-btn {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 50;
+        }
+        .menu-trigger {
+            width: 28px;
+            height: 28px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+        }
+        .menu-trigger span {
+            width: 18px;
+            height: 2px;
+            background-color: #111;
+        }
+        .menu-trigger span:nth-of-type(2) {
+            width: 18px;
+            height: 1px;
+            background-color: #666;
+        }
+        .menu-trigger.active span:nth-of-type(1) {
+            transform: translateY(5px) rotate(-45deg);
+        }
+        .menu-trigger.active span:nth-of-type(2) {
+            visibility: hidden;
+        }
+        .menu-trigger.active span:nth-of-type(3) {
+            transform: translateY(-5px) rotate(45deg);
+        }
+
+        
+
+        
+        /* 展開的MENU內容 */
+        .slide-nav {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 30;
+            padding: 120px 0 100px;
+            background-color: rgba(255,255,255,0.94);
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+        }
+        .slide-nav.open {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        
+        .navbar-list {
+            text-align: center;
+
+        }
+        .nav-item {
+            font-family: 'Crimson Text', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 4;
+            color: #111;
+            letter-spacing: 0.1em;
+        }
+        .nav-item a, a:visited {
+            color: #111;
+            text-decoration: none;
+            transition: .3s;
+
+        }
+        .nav-item a:hover {
+            color: #ccc;
+        }
+        li.tartarlink {
+            width: 100px;
+            margin: 60px auto 40px;
+            
+        }
+        .fbig {
+            width: 60px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        li.fblink {
+            width: 20px;
+        }
+        li.iglink {
+            width: 20px;
+        }
+
+        /* ----------header排版開始------------------- */
+
+        .logo {
+            display:inline-block;          
+            /* 解決共用margin的問題 */
+        }
+        .logo img {
+            /* width: 100%; */
+            width: 68px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: 100;
+        }
+
+        .mainvisual {
+            width: calc(100% - 80px);
+            height: 400px;
+            background: url(./images/mainvisual01_pc.jpg)center center no-repeat;
+            background-size: cover;
+            margin-top: 0;
+            opacity: 0;
+            transition: all .8s;
+        }
+
+        .mainvisual.fade-in {
+            opacity: 1;
+            margin-top: -22px;
+        }
+
+        .subvisual {
+            width: calc(100% - 75px);
+            height: 300px;
+            background: url(./images/mainvisual02_pc.jpg)center center no-repeat;
+            background-size: cover;
+            margin-top: 95px;
+            margin-left: 95px;
+            opacity: 0;
+            transition: all .8s;
+        }
+        .subvisual.fade-in {
+            opacity: 1;
+            margin-top: 100px;
+            margin-left: 75px;
+        }
+        .maincopy {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            line-height: 0.9;
+            letter-spacing: 0.004em;
+            position: absolute;
+            top: 122px;
+            right: 16px;
+            z-index: 10;
+            margin-top: 10px;
+            opacity: 0;
+            transition: all 1.3s;
+
+        }
+        .maincopy.fade-in {
+            opacity: 1;
+            margin-top: 0;
+        }
+
+        .bgcube {
+            width: 100%;
+            height: 650px;
+            position: absolute;
+            z-index: -999;
+            top: 307px;
+            background-color: #333;
+        }
+        /* ----------------------about開始------------------------------- */
+        section.about {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 38px 0 100px;
+            overflow: hidden;
+        }
+
+        .about-pic {
+            width: 423px;
+            position: absolute;
+            z-index: -30;
+            top: 50px;
+            left: 0;
+        }
+
+        .about-title {
+            width: 85%;
+            margin: 0 auto;
+            padding-top: 85px;
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .about-subtitle {
+            width: 85%;
+            margin: 10px auto 20px;
+            padding-top: 50px;
+            font-size: 1.6rem;
+            line-height: 1.65;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .about-subtitle.scrollin {
+            opacity: 1;
+            margin-top: 0;
+        }
+
+        .about-content {
+            width: 85%;
+            margin: 0 auto;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .about-content.scrollin {
+            opacity: 1;
+            padding-top: 0;
+        }
+
+        .about-content p {
+            padding-top: 20px;
+            font-size: 0.85rem;
+            line-height: 2.6;
+        }
+/* ----------------------design開始------------------------------- */
+        section.design {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 100px;
+        }
+
+        .design-intro {
+            width: 100%;
+            position: relative;
+            overflow: auto;
+            color: #ccc;
+        }
+
+        .design-intro-img1 {
+            float: left;
+            width: 61%;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .design-intro-img1.scrollin {
+            opacity: 1;
+        }
+
+        .design-intro-img2 {
+            float: right;
+            width: 47%;
+            margin-top: -25%;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .design-intro-img2.scrollin {
+            opacity: 1;
+            transition-delay: .1s;
+        }
+
+        .design-intro img {
+            display: block;
+            width: 100%;
+        }
+
+        .design-intro-cube {
+            width: 100%;
+            height: 50%;
+            background-color: #333;
+            position: absolute;
+            z-index: -999;
+            bottom: -10px;
+        }
+
+        .design-body {
+            position: relative;
+            overflow: auto;
+            color: #ccc;
+        }
+
+        .design-body-cube {
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            position: absolute;
+            z-index: -999;
+        }
+
+        .design-title {
+            width: 100%;
+            margin: 70px auto 100px;
+            text-align: center;
+        }
+
+        .design-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .design-title p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .design-content {
+            width: 100%;
+            margin: 0 auto 120px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .design-content-2018,
+        .design-content-2021 {
+            width: 45%;
+        }
+
+        .design-content img {
+            width: 100%;
+            display: block;
+        }
+        
+        .design-content li {
+            margin-bottom: 20px;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .design-content.scrollin li{
+            opacity: 1;
+        }
+        .design-content.scrollin li:nth-child(1){
+            transition-delay: 0.1s;
+        }
+        .design-content.scrollin li:nth-child(2){
+            transition-delay: 0.4s;
+        }
+        .design-content.scrollin li:nth-child(3){
+            transition-delay: 0.7s;
+        }
+        .design-content.scrollin li:nth-child(4){
+            transition-delay: 1.0s;
+        }
+
+        .design-content p {
+            text-align: center;
+            font-family: 'Crimson Text', serif;
+            font-weight: 300;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+/* ----------------------ourshoes開始------------------------------- */
+        section.ourshoes {
+            width: 100%;
+            height: 100%;
+        }
+
+        .ourshoes-title {
+            text-align: center;
+            padding-top: 35px;
+            margin-bottom: 65px;
+        }
+
+        .ourshoes-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .ourshoes-title p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .ourshoes-list-pic {
+            width: 84%;
+            opacity: 0;
+            transition: all .6s;
+        }
+        .ourshoes-list-pic.scrollin {
+            padding-top: 0;
+            opacity: 1;
+        }
+
+        .ourshoes-list-pic img {
+            width: 100%;
+            display: block;
+        }
+
+        .ourshoes-list-pic02 {
+            margin-left: 16%;
+        }
+
+        .ourshoes-list-text {
+            width: 100%;
+            padding:40px 40px 70px 60px;
+            background-color: #fff;
+            opacity: 0;
+            transition: all .6s;
+        }
+        .ourshoes-list-text.scrollin {
+            opacity: 1;
+            transition-delay: 0.35s;
+        }
+
+        .blackline {
+            border-top: 1px solid #111;
+            width: 30px;
+            position: absolute;
+            left: 0;
+            margin-top: 32px;
+
+        }
+
+        .ourshoes-list-text h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2.6;
+            margin-bottom: 10px;
+        }
+
+        .ourshoes-list-text h3 {
+            font-size: 1.4rem;
+            margin-bottom: 28px;
+        }
+
+        .ourshoes-list-text p {
+            font-size: 0.85rem;
+            line-height: 2.5;
+        }
+
+        .ourshoes-link {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+
+        }
+
+        .ourshoes-link a,
+        .ourshoes-link a:visited {
+            text-decoration: none;
+            color: #111;
+        }
+
+        .ourshoes-link p {
+            font-size: 0.85rem;
+            padding-left: 12px;
+            padding-right: 30px;
+        }
+
+        .triangle {
+            border-style: solid;
+            border-width: 3px 0px 3px 6px;
+            border-color: transparent transparent transparent #111;
+            position: relative;
+            top: 22px;
+        }
+
+/* ----------------------info開始------------------------------- */
+        .shoesinfo {
+            width: 100%;
+            padding: 80px 30px 55px;
+            background: url(./images/shoes-info-bg_pc.jpg) center center no-repeat;
+            background-size: cover;
+            margin-bottom: 110px;
+            color: #ccc;
+        }
+
+        .shoesinfo-title {
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .shoesinfo-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .shoesinfo-title p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .shoesinfo-content {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            letter-spacing: 0.1em;
+        }
+
+        .shoesinfo-content li {
+            border-bottom: 1px solid #666;
+            padding: 0 10px 35px;
+            margin-bottom: 35px;
+
+        }
+
+        .shoesinfo-content span {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .shoesinfo-content p {
+            display: block;
+        }
+
+        /* ----------------------access開始------------------------------- */
+        .access {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 100px;
+        }
+
+        .access-title {
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .access-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .access-title p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .access-map {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        .access-map iframe {
+            width: 100%;
+        }
+
+        .access-content {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            letter-spacing: 0.1em;
+            line-height: 2;
+        }
+
+        .access-content-left h3 {
+            font-size: 1rem;
+        }
+
+        .access-content-left p, .access-content-right {
+            margin-top: 30px;
+        }
+/* ----------------------footer開始------------------------------- */
+        footer {
+            width: 100%;
+            background-color: #333;
+            padding: 90px 60px 40px;
+            font-family: 'Crimson Text', serif;
+            font-weight: 600;
+        }
+
+        footer .navbar-list2 {
+            margin-bottom: 70px;
+        }
+
+        footer .nav-item2 {
+            font-size: 1rem;
+            color: #ccc;
+            letter-spacing: 0.04em;
+            margin-bottom: 30px;
+        }
+        .navbar-list2 li a, a:visited {
+            color: #ccc;
+            text-decoration: none;
+            transition: .3s;
+        }
+        .navbar-list2 li a:hover {
+            color: rgb(102, 102, 102);
+        }
+
+        footer li.tartarlink2 {
+            width: 100px;
+            margin-bottom: 30px;
+
+        }
+
+        footer li.fblink2 {
+            float: left;
+            width: 20px;
+            margin-right: 20px;
+        }
+
+        footer li.iglink2 {
+            float: left;
+            width: 20px;
+            margin-bottom: 140px;
+        }
+
+        footer .logo2 {
+            clear: both;
+            width: 84px;
+            margin: 0 auto 60px;
+        }
+
+        footer .logo2 img {
+            width: 100%;
+        }
+
+        footer .coryright {
+            font-size: 0.7rem;
+            color: #666;
+            text-align: center;
+        }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 560px~959px */
+@media only screen and (min-width: 560px) and  (max-width: 959px) {
+        body {
+            color: #111111;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.4rem;
+        }
+
+        #contents-wrap {
+            opacity: 0;
+            transition: all 1.4s;
+        }
+
+        #contents-wrap.fade-in {
+            opacity: 1;
+        }
+
+        .loading-img {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 70px;
+            height: 70px;
+        }
+
+        .loading-img img {
+            width: 100%;
+            height: auto;
+        }
+
+ /* --------------------header開始-------------------------- */
+
+        header {
+            width: 100%;
+            position: relative;
+        }
+
+        /* MENU按鈕 */
+        .slide-nav-btn {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 50;
+        }
+        .menu-trigger {
+            width: 28px;
+            height: 28px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+        }
+        .menu-trigger span {
+            width: 18px;
+            height: 2px;
+            background-color: #111;
+        }
+        .menu-trigger span:nth-of-type(2) {
+            width: 18px;
+            height: 1px;
+            background-color: #666;
+        }
+        .menu-trigger.active span:nth-of-type(1) {
+            transform: translateY(5px) rotate(-45deg);
+        }
+        .menu-trigger.active span:nth-of-type(2) {
+            visibility: hidden;
+        }
+        .menu-trigger.active span:nth-of-type(3) {
+            transform: translateY(-5px) rotate(45deg);
+        }
+
+        
+        /* 展開的MENU內容 */
+        .slide-nav {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 30;
+            padding: 120px 0 100px;
+            background-color: rgba(255,255,255,0.94);
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+        }
+        .slide-nav.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .navbar-list {
+            text-align: center;
+
+        }
+        .nav-item {
+            font-family: 'Crimson Text', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 4;
+            color: #111;
+            letter-spacing: 0.1em;
+        }
+        .nav-item a, a:visited {
+            color: #111;
+            text-decoration: none;
+            transition: .3s;
+
+        }
+        .nav-item a:hover {
+            color: #ccc;
+        }
+
+
+        li.tartarlink {
+            width: 100px;
+            margin: 60px auto 40px;
+            
+        }
+        .fbig {
+            width: 60px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        li.fblink {
+            width: 20px;
+        }
+        li.iglink {
+            width: 20px;
+        }
+
+        /* ----------header排版開始------------------- */
+
+        .logo {
+            display:inline-block;          
+            /* 解決共用margin的問題 */
+        }
+        .logo img {
+            /* width: 100%; */
+            width: 110px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: 100;
+        }
+
+        .mainvisual {
+            width: 70%;
+            height: 600px;
+            background: url(./images/mainvisual01_pc.jpg)center center no-repeat;
+            background-size: cover;
+            margin-top: 0;
+            opacity: 0;
+            transition: all .8s;
+        }
+
+        .mainvisual.fade-in {
+            opacity: 1;
+            margin-top: -22px;
+        }
+
+        .subvisual {
+            width: 70%;
+            height: 60vw;
+            background: url(./images/mainvisual02_pc.jpg)center center no-repeat;
+            background-size: cover;
+            margin-top: 100px;
+            margin-left: 32%;
+            opacity: 0;
+            transition: all .8s;
+        }
+        .subvisual.fade-in {
+            opacity: 1;
+            margin-top: 100px;
+            margin-left: 30%;
+        }
+        .maincopy {
+            font-family: 'Crimson Text', serif;
+            font-size: 3.8rem;
+            font-weight: 600;
+            line-height: 0.9;
+            letter-spacing: 0.004em;
+            position: absolute;
+            top: 10%;
+            right: 15%;
+            z-index: 10;
+            margin-top: 10px;
+            opacity: 0;
+            transition: all 1.3s;
+
+        }
+        .maincopy.fade-in {
+            opacity: 1;
+            margin-top: 0;
+        }
+
+        .bgcube {
+            width: 100%;
+            height: calc(482px + 60vw);
+            position: absolute;
+            z-index: -999;
+            top: 400px;
+            background-color: #333;
+        }
+/* ----------------------about開始------------------------------- */
+        section.about {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 65px 0 100px;
+        }
+
+        .about-pic {
+            width: 423px;
+            position: absolute;
+            z-index: -30;
+            top: 80px;
+            left: 0;
+        }
+
+        .about-title {
+            width: 85%;
+            margin: 0 auto;
+            padding-top: 85px;
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .about-subtitle {
+            width: 85%;
+            margin: 10px auto 20px;
+            padding-top: 50px;
+            font-size: 1.6rem;
+            line-height: 1.65;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .about-subtitle.scrollin {
+            opacity: 1;
+            margin-top: 0;
+        }
+
+        .about-content {
+            width: 85%;
+            margin: 0 auto;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .about-content.scrollin {
+            opacity: 1;
+            padding-top: 0;
+        }
+
+        .about-content p {
+            padding-top: 20px;
+            font-size: 0.85rem;
+            line-height: 2.6;
+        }
+/* ----------------------design開始------------------------------- */
+        section.design {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 100px;
+        }
+
+        .design-intro {
+            width: 100%;
+            position: relative;
+            overflow: auto;
+            color: #ccc;
+        }
+
+        .design-intro-img1 {
+            float: left;
+            width: 61%;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .design-intro-img1.scrollin {
+            opacity: 1;
+        }
+
+        .design-intro-img2 {
+            float: right;
+            width: 47%;
+            margin-top: -25%;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .design-intro-img2.scrollin {
+            opacity: 1;
+            transition-delay: .1s;
+        }
+
+        .design-intro img {
+            display: block;
+            width: 100%;
+        }
+
+        .design-intro-cube {
+            width: 100%;
+            height: 50%;
+            background-color: #333;
+            position: absolute;
+            z-index: -999;
+            bottom: 0;
+        }
+
+        .design-body {
+            position: relative;
+            overflow: auto;
+            color: #ccc;
+        }
+
+        .design-body-cube {
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            position: absolute;
+            z-index: -999;
+        }
+
+        .design-title {
+            width: 100%;
+            margin: 70px auto 100px;
+            text-align: center;
+        }
+
+        .design-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .design-title p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .design-content {
+            width: 100%;
+            margin: 0 auto 120px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .design-content-2018,
+        .design-content-2021 {
+            width: 45%;
+        }
+
+        .design-content img {
+            width: 100%;
+            display: block;
+        }
+        
+        .design-content li {
+            margin-bottom: 20px;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .design-content.scrollin li{
+            opacity: 1;
+        }
+        .design-content.scrollin li:nth-child(1){
+            transition-delay: 0.1s;
+        }
+        .design-content.scrollin li:nth-child(2){
+            transition-delay: 0.4s;
+        }
+        .design-content.scrollin li:nth-child(3){
+            transition-delay: 0.7s;
+        }
+        .design-content.scrollin li:nth-child(4){
+            transition-delay: 1.0s;
+        }
+
+        .design-content p {
+            text-align: center;
+            font-family: 'Crimson Text', serif;
+            font-weight: 300;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+/* ----------------------ourshoes開始------------------------------- */
+        section.ourshoes {
+            width: 100%;
+            height: 100%;
+        }
+
+        .ourshoes-title {
+            text-align: center;
+            padding-top: 35px;
+            margin-bottom: 65px;
+        }
+
+        .ourshoes-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .ourshoes-title p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .ourshoes-list-pic {
+            width: 84%;
+            opacity: 0;
+            transition: all .6s;
+        }
+        .ourshoes-list-pic.scrollin {
+            padding-top: 0;
+            opacity: 1;
+        }
+
+        .ourshoes-list-pic img {
+            width: 100%;
+            display: block;
+        }
+
+        .ourshoes-list-pic02 {
+            margin-left: 16%;
+        }
+
+        .ourshoes-list-text {
+            width: 84%;
+            padding:40px 0 120px 100px;
+            background-color: #fff;
+            opacity: 0;
+            transition: all .6s;
+        }
+        .ourshoes-list-text.scrollin {
+            opacity: 1;
+            transition-delay: 0.35s;
+        }
+
+        .blackline {
+            border-top: 1px solid #111;
+            width: 80px;
+            position: absolute;
+            left: 0;
+            margin-top: 32px;
+
+        }
+
+        .ourshoes-list-text h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2.6;
+            margin-bottom: 10px;
+        }
+
+        .ourshoes-list-text h3 {
+            font-size: 1.4rem;
+            margin-bottom: 28px;
+        }
+
+        .ourshoes-list-text p {
+            font-size: 0.85rem;
+            line-height: 2.5;
+        }
+
+        .ourshoes-link {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+
+        }
+
+        .ourshoes-link a,
+        .ourshoes-link a:visited {
+            text-decoration: none;
+            color: #111;
+        }
+
+        .ourshoes-link p {
+            font-size: 0.85rem;
+            padding-left: 12px;
+            padding-right: 30px;
+        }
+
+        .triangle {
+            border-style: solid;
+            border-width: 3px 0px 3px 6px;
+            border-color: transparent transparent transparent #111;
+            position: relative;
+            top: 22px;
+        }
+
+/* ----------------------info開始------------------------------- */
+        .shoesinfo {
+            width: 100%;
+            padding: 100px 60px 100px;
+            background: url(./images/shoes-info-bg_pc.jpg) center center no-repeat;
+            background-size: cover;
+            margin-bottom: 120px;
+            color: #ccc;
+        }
+
+        .shoesinfo-title {
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .shoesinfo-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .shoesinfo-title p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .shoesinfo-content {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            letter-spacing: 0.1em;
+        }
+
+        .shoesinfo-content li {
+            border-bottom: 1px solid #666;
+            padding: 0 10px 35px;
+            margin-bottom: 35px;
+
+        }
+
+        .shoesinfo-content span {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .shoesinfo-content p {
+            display: block;
+        }
+
+        /* ----------------------access開始------------------------------- */
+        .access {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 120px;
+        }
+
+        .access-title {
+            margin: 0 auto 75px;
+            text-align: center;
+        }
+
+        .access-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .access-title p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .access-map {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        .access-map iframe {
+            width: 100%;
+        }
+
+        .access-content {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            letter-spacing: 0.1em;
+            line-height: 2;
+        }
+
+        .access-content-left h3 {
+            font-size: 1rem;
+        }
+
+        .access-content-left p, .access-content-right {
+            margin-top: 30px;
+        }
+/* ----------------------footer開始------------------------------- */
+        footer {
+            width: 100%;
+            background-color: #333;
+            padding: 120px 90px 50px;
+            font-family: 'Crimson Text', serif;
+            font-weight: 600;
+        }
+
+        footer .navbar-list2 {
+            margin-bottom: 70px;
+        }
+
+        footer .nav-item2 {
+            font-size: 1rem;
+            color: #ccc;
+            letter-spacing: 0.04em;
+            margin-bottom: 30px;
+        }
+        .navbar-list2 li a, a:visited {
+            color: #ccc;
+            text-decoration: none;
+            transition: .3s;
+        }
+        .navbar-list2 li a:hover {
+            color: rgb(102, 102, 102);
+        }
+
+        footer li.tartarlink2 {
+            width: 100px;
+            margin-bottom: 30px;
+
+        }
+
+        footer li.fblink2 {
+            float: left;
+            width: 20px;
+            margin-right: 20px;
+        }
+
+        footer li.iglink2 {
+            float: left;
+            width: 20px;
+            margin-bottom: 140px;
+        }
+
+        footer .logo2 {
+            clear: both;
+            width: 84px;
+            margin: 0 auto 60px;
+        }
+
+        footer .logo2 img {
+            width: 100%;
+        }
+
+        footer .coryright {
+            font-size: 0.7rem;
+            color: #666;
+            text-align: center;
+        }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 960px以上 */
+        
+@media only screen and (min-width: 960px) {
+
+        body {
+            color: #111111;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.4rem;
+        }
+
+        #contents-wrap {
+            opacity: 0;
+            transition: all 1.4s;
+        }
+
+        #contents-wrap.fade-in {
+            opacity: 1;
+        }
+
+        .loading-img {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 70px;
+            height: 70px;  
+        }
+
+        .loading-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        
+        
+/* --------------------header開始------------------------- */
+
+        header {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .logo img {
+            width: 122px;
+            position: absolute;
+            top: 90px;
+            left: 120px;
+        }
+
+        ul.snslink-list {
+            float: right;
+            display: flex;
+            padding-right: 120px;
+            margin-top: 90px;
+        }
+        .fbig {
+            display: flex;
+        }
+
+        li.tartarlink {
+            width: 120px;
+            border-right: 1px solid #000;
+            padding-right: 30px;
+            margin-right: 30px;
+            padding-top: 3px;
+        }
+
+        li.fblink {
+            width: 20px;
+            margin-right: 20px;
+        }
+
+        li.iglink {
+            width: 20px;
+        }
+
+        .mainvisual {
+            width: 43.5%;
+            height: calc(100vh - 200px);
+            background: url(./images/mainvisual01_pc.jpg)center center no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -10;
+            margin-top: 25px;
+            opacity: 0;
+            transition: all .8s;
+        }
+
+        .mainvisual.fade-in {
+            opacity: 1;
+            margin-top: 0;
+        }
+
+        .subvisual {
+            width: 43.5%;
+            height: calc(100vh - 160px);
+            background: url(./images/mainvisual02_pc.jpg)center center no-repeat;
+            background-size: cover;
+            position: absolute;
+            z-index: -10;
+            top: 160px;
+            right: 0;
+            margin-top: -25px;
+            opacity: 0;
+            transition: all .8s;
+        }
+        .subvisual.fade-in {
+            opacity: 1;
+            margin-top: 0;
+        }
+
+        .maincopy {
+            font-family: 'Crimson Text', serif;
+            font-size: 5.8rem;
+            font-weight: 600;
+            line-height: 0.9;
+            letter-spacing: 0.004em;
+            position: absolute;
+            top: 20%;
+            left: 53%;
+            z-index: 1000;
+            margin-top: 10px;
+            opacity: 0;
+            transition: all 1.3s;
+
+        }
+        .maincopy.fade-in {
+            opacity: 1;
+            margin-top: 0;
+        }
+
+        .navbar-list {
+            width: 60%;
+            position: absolute;
+            bottom: 90px;
+            left: 8.5%;
+        }
+
+        .nav-item {
+            display: inline-block;
+            font-family: 'Crimson Text', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #999999;
+            letter-spacing: 0.04em;
+            margin-right: 6.5%;
+        }
+
+        .navbar-list li a, a:visited {
+            color: #999;
+            text-decoration: none;
+            transition: .3s;
+        }
+        .navbar-list li a:hover {
+            color: #ccc;
+        }
+
+        .bgcube {
+            width: 74%;
+            height: calc(100vh - 59% + 236px);
+            position: absolute;
+            z-index: -999;
+            top: 59%;
+            right: 0;
+            background-color: #333333;
+        }
+
+/* ----------------------about開始------------------------------- */
+        section.about {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 93px 0 160px;
+        }
+
+        .about-pic {
+            width: 550px;
+            position: absolute;
+            z-index: -30;
+            left: 12%;
+        }
+
+        .about-title {
+            width: 70%;
+            margin: 0 auto;
+            padding-top: 85px;
+            font-family: 'Crimson Text', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+        }
+
+        .about-subtitle {
+            width: 70%;
+            margin: 10px auto 40px;
+            padding-top: 78px;
+            font-size: 1.6rem;
+            line-height: 1.65;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .about-subtitle.scrollin {
+            opacity: 1;
+            margin-top: 0;
+        }
+
+        .about-content {
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .about-content.scrollin {
+            opacity: 1;
+            padding-top: 0;
+        }
+
+        .about-content p {
+            width: 45%;
+            font-size: 0.9rem;
+            line-height: 2.6;
+        }
+/* ----------------------design開始------------------------------- */
+        section.design {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 170px;
+        }
+
+        .design-intro {
+            width: 85%;
+            position: relative;
+            overflow: auto;
+            color: #ccc;
+        }
+
+        .design-intro-img1 {
+            float: left;
+            width: 61%;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .design-intro-img1.scrollin {
+            opacity: 1;
+        }
+
+        .design-intro-img2 {
+            float: right;
+            width: 47%;
+            margin-top: -35%;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .design-intro-img2.scrollin {
+            opacity: 1;
+            transition-delay: .1s;
+        }
+
+        .design-intro img {
+            display: block;
+            width: 100%;
+        }
+
+        .design-intro-cube {
+            width: 74%;
+            height: 50%;
+            background-color: #333;
+            position: absolute;
+            z-index: -999;
+            bottom: 0;
+        }
+
+        .design-body {
+            position: relative;
+            overflow: auto;
+            color: #ccc;
+        }
+
+        .design-body-cube {
+            width: 74%;
+            height: 100%;
+            background-color: #333;
+            position: absolute;
+            z-index: -999;
+        }
+
+        .design-title {
+            width: 65%;
+            margin: 70px auto 100px;
+        }
+
+        .design-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .design-title p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .design-content {
+            width: 65%;
+            margin: 0 auto 160px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .design-content-2018,
+        .design-content-2021 {
+            width: 45%;
+        }
+
+        .design-content img {
+            width: 100%;
+            display: block;
+        }
+        
+        .design-content li {
+            margin-bottom: 10px;
+            opacity: 0;
+            transition: all 1.0s;
+        }
+        .design-content.scrollin li{
+            opacity: 1;
+        }
+        .design-content.scrollin li:nth-child(1){
+            transition-delay: 0.1s;
+        }
+        .design-content.scrollin li:nth-child(2){
+            transition-delay: 0.4s;
+        }
+        .design-content.scrollin li:nth-child(3){
+            transition-delay: 0.7s;
+        }
+        .design-content.scrollin li:nth-child(4){
+            transition-delay: 1.0s;
+        }
+
+        .design-content p {
+            font-family: 'Crimson Text', serif;
+            font-weight: 300;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+/* ----------------------ourshoes開始------------------------------- */
+        section.ourshoes {
+            width: 100%;
+            height: 100%;
+        }
+
+        .ourshoes-title {
+            text-align: center;
+            padding-top: 35px;
+            margin-bottom: 115px;
+        }
+
+        .ourshoes-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .ourshoes-title p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .ourshoes-list {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        .ourshoes-list01,
+        .ourshoes-list02,
+        .ourshoes-list03 {
+            overflow: auto;
+        }
+
+        .ourshoes-list-left {
+            float: left;
+        }
+
+        .ourshoes-list-right {
+            float: right;
+        }
+
+        .ourshoes-list-pic {
+            width: 64%;
+            padding-top: 25px;
+            opacity: 0;
+            transition: all .6s;
+        }
+        .ourshoes-list-pic.scrollin {
+            padding-top: 0;
+            opacity: 1;
+        }
+
+        .ourshoes-list-pic img {
+            width: 100%;
+            display: block;
+        }
+
+        .ourshoes-list-text {
+            width: 47%;
+            padding: 8% 11% 5%;
+            background-color: #fff;
+            margin-top: -24%;
+            position: relative;
+            opacity: 0;
+            transition: all .6s;
+        }
+        .ourshoes-list-text.scrollin {
+            margin-top: -25%;
+            opacity: 1;
+            transition-delay: 0.35s;
+        }
+
+        .blackline {
+            border-top: 1px solid #111;
+            width: 15%;
+            position: absolute;
+            left: 0;
+            margin-top: 52px;
+
+        }
+
+        .ourshoes-list-text h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            line-height: 2.6;
+            margin-bottom: 20px;
+        }
+
+        .ourshoes-list-text h3 {
+            font-size: 2rem;
+            margin-bottom: 28px;
+        }
+
+        .ourshoes-list-text p {
+            font-size: 1rem;
+            line-height: 2.5;
+        }
+
+        .ourshoes-link {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+
+        }
+
+        .ourshoes-link a,
+        .ourshoes-link a:visited {
+            text-decoration: none;
+            color: #111;
+        }
+
+        .ourshoes-link p {
+            font-size: 0.9rem;
+            padding-left: 12px;
+            padding-right: 30px;
+        }
+
+        .triangle {
+            border-style: solid;
+            border-width: 3px 0px 3px 6px;
+            border-color: transparent transparent transparent #111;
+            position: relative;
+            top: 22px;
+        }
+
+/* ----------------------info開始------------------------------- */
+        .shoesinfo {
+            width: 100%;
+            padding: 140px 0 160px;
+            background: url(./images/shoes-info-bg_pc.jpg) center center no-repeat;
+            background-size: cover;
+            margin-bottom: 120px;
+            color: #ccc;
+        }
+
+        .shoesinfo-title {
+            margin: 0 auto 110px;
+            text-align: center;
+        }
+
+        .shoesinfo-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .shoesinfo-title p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .shoesinfo-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            letter-spacing: 0.1em;
+        }
+
+        .shoesinfo-content li {
+            border-bottom: 1px solid #666;
+            padding: 0 10px 43px;
+            margin-bottom: 43px;
+
+        }
+
+        .shoesinfo-content span {
+            display: inline-block;
+            width: 240px;
+            vertical-align: top;
+        }
+
+        .shoesinfo-content p {
+            display: inline-block;
+        }
+/* ----------------------access開始------------------------------- */
+        .access {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 170px;
+        }
+
+        .access-title {
+            margin: 0 auto 110px;
+            text-align: center;
+        }
+
+        .access-title span {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .access-title p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .access-map {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+        .access-map iframe {
+            width: 100%;
+        }
+
+        .access-content {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            letter-spacing: 0.1em;
+            display: flex;
+            justify-content: space-between;
+            line-height: 2;
+        }
+
+        .access-content-left h3 {
+            font-size: 1.1rem;
+        }
+
+        .access-content-left p {
+            margin-top: 15px;
+        }
+/* ----------------------footer開始------------------------------- */
+        footer {
+            width: 100%;
+            background-color: #333;
+            padding: 100px 120px 70px;
+            font-family: 'Crimson Text', serif;
+            font-weight: 600;
+        }
+
+        footer .navbar-list2 {
+            display: flex;
+            width: 60%;
+        }
+
+        footer .nav-item2 {
+            font-size: 1rem;
+            color: #ccc;
+            letter-spacing: 0.04em;
+            margin-right: 7%;
+        }
+
+        .navbar-list2 li a, a:visited {
+            color: #ccc;
+            text-decoration: none;
+            transition: .3s;
+        }
+        .navbar-list2 li a:hover {
+            color: rgb(102, 102, 102);
+        }
+
+        footer ul.snslink-list2 {
+            display: flex;
+            justify-content: flex-end;
+            padding-left: 80%;
+            padding-top: 10px;
+            padding-bottom: 250px;
+        }
+
+        footer li.tartarlink2 {
+            width: 120px;
+            border-right: 1px solid #ccc;
+            padding-right: 30px;
+            margin-right: 30px;
+            padding-top: 3px;
+        }
+
+        footer li.fblink2 {
+            width: 20px;
+            margin-right: 20px;
+        }
+
+        footer li.iglink2 {
+            width: 20px;
+        }
+
+        footer .logo2 {
+            width: 122px;
+            margin: 0 auto;
+        }
+
+        footer .logo2 img {
+            width: 100%;
+        }
+
+        footer .coryright {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: right;
+        }
+    }
